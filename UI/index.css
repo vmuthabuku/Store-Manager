@@ -9,7 +9,7 @@ body {
 #Container {
     margin: 0;
     display: grid;
-    grid-template-rows: 1fr 5fr 1fr;
+    grid-template-rows: 1fr 5fr 0.5fr;
     grid-row-gap: 1ch;
     /* background-color: lightskyblue; */
     height: 100vh;
