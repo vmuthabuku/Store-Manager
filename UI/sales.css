@@ -7,7 +7,8 @@
     }
     
     .delete {
-        padding-top: 190px
+        padding-top: 190px;
+        background-color: #ccc;
     }
     
     #Container {
