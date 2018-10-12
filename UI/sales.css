@@ -6,6 +6,10 @@
         padding: 0;
     }
     
+    .delete {
+        padding-top: 190px
+    }
+    
     #Container {
         margin: 0;
         display: grid;
