@@ -163,11 +163,16 @@ ul li button:hover {
     background-color: lightgray;
 }
 
+.button a {
+    text-decoration: none;
+    color: white;
+}
+
 
 /* Product grid */
 
 .prod {
-    border: 2px solid;
+    border: 0.5px solid;
     padding: 1%;
     box-shadow: 2px;
     border-radius: 5px;
