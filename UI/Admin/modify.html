@@ -1,0 +1,49 @@
+<!Doctype html>
+<html>
+
+<head>
+    <title>Store-Manager</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="../Static/sales.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="Container">
+        <div class="header">
+            <i class="fa fa-bar-chart">Store-Manager</i>
+        </div>
+        <div class="sales-input">
+            <h3>Modify Item</h3>
+            <form action="/action_page.php">
+                <label for="id">ID</label>
+
+                <input type="text" id="text" name="text" placeholder="input product Id">
+
+
+                <label for="item">Item</label>
+                <select id="item-1" name="item">
+                      <option value="boots">Boots</option>
+                      <option value="fifa">Fifa</option>
+                      <option value="ball">Ball</option>
+                      <option value="soda">Soda</option>
+                      <option value="juice">Juice</option>
+                    </select>
+
+                <label for="quantity">Quantity</label>
+                <input type="text" id="quantity" name="quantiy" placeholder="quantity">
+
+                <label for="price">Price</label>
+                <input type="text" id="price" name="price" placeholder="price of commodity">
+
+                <input type="submit" value="Modify">
+            </form>
+
+        </div>
+        <div class="footer">
+            <p>&copy; copyright <i><strong>Store-Manager</strong></i> 2018.</p>
+        </div>
+</body>
+
+</html>
