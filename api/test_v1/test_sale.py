@@ -2,6 +2,8 @@ import unittest
 from flask import json
 import json
 
+from ..app import create_app
+
 class SaleRecord(unittest.TestCase):
     """This class represents Questions and Answers posted."""
 
