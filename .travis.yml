@@ -7,7 +7,7 @@ install:
   - pip install -r requirements.txt
 
 script: 
-  - pytest --cov=app
+  - py.test --cov=api
 
 
 after_success:
