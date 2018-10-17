@@ -19,7 +19,7 @@ class get_all(Resource):
 
     def get(self):
         # return {'sale-record':sale_record}
-        return sale_record
+        return sale_record, 200
     
 
     def post(self):
