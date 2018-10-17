@@ -2,6 +2,8 @@ import os
 import unittest
 from flask import json
 import json
+import sys
+sys.path.append("..")
 
 from ..app import create_app
 
