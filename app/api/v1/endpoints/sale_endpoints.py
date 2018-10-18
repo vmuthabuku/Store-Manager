@@ -23,11 +23,16 @@ class get_all(Resource):
     
 
     def post(self):
+        data = get_all.parser.parse_args()
+
+        verify_product = validator.verify_sales_information(data['item'], data['price'], data['amount_sold'])
+        if verify_product:
+            return {'message':verify_product}, 409
+
         id_count = 1
         for sale in sale_record:
             id_count += 1
 
-        data = get_all.parser.parse_args()
         new_item = Sale(data['item'], data['price'], data['amount_sold'])        
         new_item_dict = new_item.make_dict(id_count)
         sale_record.append(new_item_dict)

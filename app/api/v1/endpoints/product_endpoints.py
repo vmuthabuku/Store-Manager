@@ -26,11 +26,17 @@ class get_all(Resource):
         return {'cart':carts}, 200
 
     def post(self):
+        data = self.parser.parse_args()
+
+        verify_product = validator.verify_product_information(data['name'], data['price'], data['quantity'], data['description'])
+
+        if verify_product:
+            return {"message": verify_product}, 409
+
         id_count = 1
         for cart in carts:
             id_count += 1
 
-        data = self.parser.parse_args()
         new_item = Item(data['name'], data['price'], data['quantity'], data['description'])
         new_item_dict = new_item.make_dict(id_count)
 
