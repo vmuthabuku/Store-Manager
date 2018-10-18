@@ -2,7 +2,7 @@ import unittest
 from flask import json
 import json
 
-from ..app import create_app
+from .. import create_app
 
 class StoreManager(unittest.TestCase):
     """This class represents storemanger products posted test class"""
