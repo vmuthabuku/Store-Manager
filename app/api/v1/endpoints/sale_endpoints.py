@@ -18,11 +18,12 @@ class get_all(Resource):
     parser.add_argument("amount_sold")
 
     def get(self):
-        # return {'sale-record':sale_record}
+        """This handles getting all sale records"""
         return sale_record, 200
     
 
     def post(self):
+        """This handles posting a sale record"""
         data = get_all.parser.parse_args()
 
         verify_product = validator.verify_sales_information(data['item'], data['price'], data['amount_sold'])

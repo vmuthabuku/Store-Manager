@@ -23,11 +23,12 @@ class get_all(Resource):
 
 
     def get(self):
+        """This handles getting all products in a cart"""
         return {'cart':carts}, 200
 
     def post(self):
+        """This handles posting a product"""
         data = self.parser.parse_args()
-
         verify_product = validator.verify_product_information(data['name'], data['price'], data['quantity'], data['description'])
 
         if verify_product:
@@ -46,7 +47,6 @@ class get_all(Resource):
 class get_id(Resource):
     """This class gets the item by its id"""
     @classmethod
-
     def get(cls, productid):
         check_id = validator.check_using_id(carts,int(productid))
         if check_id:
