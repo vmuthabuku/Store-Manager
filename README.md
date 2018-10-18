@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/vmuthabuku/Store-Manager.svg?branch=ch-passing-tests-api-161293677)]
+[![Build Status](https://travis-ci.com/vmuthabuku/Store-Manager.svg?branch=ch-passing-tests-api-161293677)]https://travis-ci.com/vmuthabuku/Store-Manager.svg?branch=master
 [![Coverage Status](https://coveralls.io/repos/github/vmuthabuku/Store-Manager/badge.svg?branch=ch-passing-tests-api-161293677)](https://coveralls.io/github/vmuthabuku/Store-Manager?branch=ch-passing-tests-api-161293677)
 
 
