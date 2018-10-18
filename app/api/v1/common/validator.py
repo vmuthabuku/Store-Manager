@@ -24,8 +24,6 @@ def verify_product_information(name, price, quantity, description):
     """
     if len(name) < 1:
         return 'You cannot post an empty name, Please add a name'
-    if len(price) < 1:
-        return 'You cannot post an empty price, Please add a price'
     if len(quantity) < 1:
         return 'You cannot post an empty quantity, Please add quantity'    
     if price.isalpha():
