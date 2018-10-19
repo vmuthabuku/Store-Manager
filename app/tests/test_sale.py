@@ -4,7 +4,7 @@ from flask import json
 import json
 
 
-from run import create_app
+from app import create_app
 
 class SaleRecord(unittest.TestCase):
     """This class represents Sales Records Test class."""
