@@ -9,26 +9,27 @@ api = Api(sale_manager,prefix='/api/v1')
 
 sale_record=[]
 
+
 class get_all(Resource):
     """ This class helps us get all the sales record """
     
     parser = reqparse.RequestParser()
     parser.add_argument("item")
-    parser.add_argument("price")
-    parser.add_argument("amount_sold")
+    parser.add_argument("price",type=int, required=True, help="price can only be an integer")
+    parser.add_argument("amount_sold",type=int, required=True, help="amount can only be an integer")
 
     def get(self):
         """This handles getting all sale records"""
-        return sale_record, 200
+        return {'sale record':sale_record}
     
 
     def post(self):
         """This handles posting a sale record"""
         data = get_all.parser.parse_args()
+        valid = validator.check_empty(data["item"])
+        if valid:
+            return {"message": valid}, 409
 
-        verify_product = validator.verify_sales_information(data['item'], data['price'], data['amount_sold'])
-        if verify_product:
-            return {'message':verify_product}, 409
 
         id_count = 1
         for sale in sale_record:

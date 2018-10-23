@@ -46,9 +46,6 @@ class StoreManager(unittest.TestCase):
         response = self.client.post(
             'api/v1/products', data=json.dumps(self.sample_data1), content_type='application/json'
         )
-        result = json.loads(response.data.decode())
-        self.assertTrue(
-            result['message'], 'You cannot post an empty name, Please add a name')
         self.assertEqual(response.status_code, 409)
     
     def test_product_price_type(self):
@@ -60,7 +57,7 @@ class StoreManager(unittest.TestCase):
         result = json.loads(response.data.decode())
         self.assertTrue(
             result['message'], 'The price has to be an integer')
-        self.assertEqual(response.status_code, 409)
+        self.assertEqual(response.status_code, 400)
     
     def test_product_no_description(self):
         """ Testing if a user cannot post a product with no description """
@@ -68,10 +65,7 @@ class StoreManager(unittest.TestCase):
         response = self.client.post(
             'api/v1/products', data=json.dumps(self.sample_data3), content_type='application/json'
         )
-        result = json.loads(response.data.decode())
-        self.assertTrue(
-            result['message'], 'You cannot post an empty description')
-        self.assertEqual(response.status_code, 409)
+        self.assertEqual(response.status_code, 400)
 
     def test_product_quantity_type(self):
         """Testing if a user cannot post a wrong product quantity type """
@@ -82,7 +76,7 @@ class StoreManager(unittest.TestCase):
         result = json.loads(response.data.decode())
         self.assertTrue(
             result['message'], 'The price has to be a digit')
-        self.assertEqual(response.status_code, 409)
+        self.assertEqual(response.status_code, 400)
 
     
 

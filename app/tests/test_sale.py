@@ -46,8 +46,6 @@ class SaleRecord(unittest.TestCase):
         '/api/v1/sales', data=json.dumps(self.sample_data), content_type='application/json'
         ) 
         result = json.loads(response.data.decode())
-        self.assertEqual(
-            result['message'],  'You cannot post an empty item name, Please add a name')
         self.assertEqual(response.status_code, 409) 
 
     def test_price_type(self):
@@ -56,9 +54,7 @@ class SaleRecord(unittest.TestCase):
         '/api/v1/sales', data=json.dumps(self.sample_data1), content_type='application/json'
         ) 
         result = json.loads(response.data.decode())
-        self.assertEqual(
-            result['message'],  'You cannot post an empty price, Please add a price')
-        self.assertEqual(response.status_code, 409) 
+        self.assertEqual(response.status_code, 400) 
 
     def test_amount_item(self):
         """Testing if user cannot post wrong amount sold type"""
@@ -66,9 +62,7 @@ class SaleRecord(unittest.TestCase):
         '/api/v1/sales', data=json.dumps(self.sample_data2), content_type='application/json'
         ) 
         result = json.loads(response.data.decode())
-        self.assertEqual(
-            result['message'],  'The price has to be a digit')
-        self.assertEqual(response.status_code, 409) 
+        self.assertEqual(response.status_code, 400) 
         
 
     
