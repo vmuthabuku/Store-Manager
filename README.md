@@ -1,6 +1,8 @@
-[![Build Status](https://travis-ci.com/vmuthabuku/Store-Manager.svg?branch=ch-passing-tests-api-161293677)
-[![Coverage Status](https://coveralls.io/repos/github/vmuthabuku/Store-Manager/badge.svg?branch=ch-passing-tests-api-161293677)](https://coveralls.io/github/vmuthabuku/Store-Manager?branch=ch-passing-tests-api-161293677)
-
+[![Build Status](https://travis-ci.com/vmuthabuku/Store-Manager.svg?branch=ch-codeclimate-badge-161416503)
+[![Coverage Status](https://coveralls.io/repos/github/vmuthabuku/Store-Manager/badge.svg?branch=ch-codeclimate-badge-161416503
+)](https://coveralls.io/github/vmuthabuku/Store-Manager?branch=ch-codeclimate-badge-161416503
+)
+[![Maintainability](https://api.codeclimate.com/v1/badges/94de1a36b60b36afe112/maintainability)](https://codeclimate.com/github/vmuthabuku/Store-Manager/maintainability)
 
 
 # Store-Manager
