@@ -7,11 +7,11 @@ class Sale():
         self.amount_sold = amount_sold       
 
 
-    def make_dict(self,sale_id):
+    def make_dict(self,item_id):
         """receives the item as an object and turns it to a dict"""
         return dict(
             item = self.item,
             price = self.price,
             amount_sold = self.amount_sold,
-            sale_id = sale_id
+            item_id = item_id
         )

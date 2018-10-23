@@ -44,10 +44,10 @@ class get_id(Resource):
     """This class gets the sale by its id"""
     @classmethod
     def get(cls,saleid):
-        check_id = validator.check_sale_id(sale_record,int(saleid))
+        check_id = validator.check_using_id(sale_record,int(saleid))
         if check_id:
             return check_id, 200
-        return {'message':'no such question'}
+        return {'message':'no such id'}
                
 
 api.add_resource(get_all, "/sales")

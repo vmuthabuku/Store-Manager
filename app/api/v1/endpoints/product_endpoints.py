@@ -60,7 +60,7 @@ class get_id(Resource):
         check_id = validator.check_using_id(carts,int(productid))
         if check_id:
             return check_id, 200
-        return {'message':'no such question'}
+        return {'message':'no such id'}
 
 api.add_resource(get_page, "/")
 api.add_resource(get_all, "/products")
