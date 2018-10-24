@@ -26,10 +26,12 @@ in the terminal in the root directory of the folder run `pytest`
 ### Pivotal tracker stories 
 https://www.pivotaltracker.com/n/projects/2202864
 
-###Heroku link
+### Heroku link
+
 https://storemanager-vmuthabuku.herokuapp.com/
 
-##Endpoints
+## Endpoints
+
 The api endpoints are
 
 | Endpoint | Description |
