@@ -1,6 +1,4 @@
 from flask import Flask
-import sys
-sys.path.append("..")
 from ..instance.config import app_config
 from .v1.endpoints.product_endpoints import product_print
 
