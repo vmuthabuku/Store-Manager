@@ -37,6 +37,20 @@ class get_all(Resource):
         carts.append(new_item_dict)
         return {'message': 'Your item has been added successfully'}, 201 
 
+class get_id(Resource):
+    """This class gets the item by its id"""
+    @classmethod
+
+    def get(cls, productid):
+        check_id = validator.check_using_id(carts,int(productid))
+        if check_id:
+            return check_id, 200
+        return {'message':'no such question'}
+
+
+api.add_resource(get_all, "/cart")
+api.add_resource(get_id, "/cart/<productid>")
+
     
 
     
