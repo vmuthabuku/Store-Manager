@@ -20,5 +20,17 @@ class get_all(Resource):
     def get(self):
         # return {'sale-record':sale_record}
         return sale_record
+    
+
+    def post(self):
+        id_count = 1
+        for sale in sale_record:
+            id_count += 1
+
+        data = get_all.parser.parse_args()
+        new_item = Sale(data['item'], data['price'], data['amount_sold'])        
+        new_item_dict = new_item.make_dict(id_count)
+        sale_record.append(new_item_dict)
+        return {'message': 'Sale record created',}, 201
 
 api.add_resource(get_all, "/sales")
