@@ -19,14 +19,6 @@ class SaleRecord(unittest.TestCase):
         self.sample_data1 = {'item': 'What ', "price":"", "amount_sold":"12"}
         self.sample_data2 = {'item': 'What ', "price":"122", "amount_sold":"wws"}
 
-
-    def test_post_sale(self):
-        """Testing posting a sale record."""
-
-        response = self.client.post(
-            '/api/v1/sales', data=json.dumps(self.sale_items), content_type='application/json')
-        self.assertEqual(response.status_code, 201)
-
     def test_get_all(self):
         """Testing to get all sale records"""
         response = self.client.get(

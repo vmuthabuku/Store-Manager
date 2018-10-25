@@ -12,4 +12,26 @@ def check_empty(s):
     if s == '':
         return "cannot be blank"
 
+def check_name(l_name,name):
+    for item in l_name:
+        if item["name"] == name:
+            return "Product already in inventory"
+
+def check_item_name(lis_name, name):
+    for item in lis_name:
+        if item["name"] != name:
+            return{"message":"item not in inventory"}
+
+def check_item_price(lis, price):
+    for item in lis:
+        if item["price"] != price:
+            return{"message":"price has to be the same"}
+
+
+def reduce_item(list_nme,amount_sold):
+    for item in list_nme:
+        if item["quantity"] >= amount_sold:
+            item["quantity"] -= amount_sold
+            return{"message":"product updated"}
+        return{"message":"sold cant exceed quantity"}
 

@@ -43,6 +43,10 @@ class get_all(Resource):
         if verify_prod:
             return {"message": verify_prod}, 400
 
+        duplicate = validator.check_name(carts,data["name"])
+        if duplicate:
+            return{"message": duplicate}, 409
+
         id_count = 1
         for cart in carts:
             id_count += 1
