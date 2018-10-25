@@ -48,10 +48,5 @@ class get_id(Resource):
         return {'message':'no such question'}
 
 
-api.add_resource(get_all, "/cart")
-api.add_resource(get_id, "/cart/<productid>")
-
-    
-
-    
 api.add_resource(get_all, "/products")
+api.add_resource(get_id, "/products/<productid>")

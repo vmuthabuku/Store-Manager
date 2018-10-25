@@ -1,9 +1,6 @@
-import os
 import unittest
 from flask import json
 import json
-import sys
-sys.path.append("..")
 
 from ..app import create_app
 
@@ -16,7 +13,7 @@ class StoreManager(unittest.TestCase):
         self.client = self.app.test_client()
         self.cart_items = {'name': 'What ', "price":"122", "quantity":"12", "description":"veryuu"}
         
-        
+        # @Krafty-Coder
     def test_post_item(self):
         """Testing posting an item."""
         response = self.client.post(
