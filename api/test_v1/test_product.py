@@ -1,6 +1,9 @@
+import os
 import unittest
 from flask import json
 import json
+
+from ..app import create_app
 
 class StoreManager(unittest.TestCase):
     """This class represents Questions and Answers posted."""
@@ -15,19 +18,19 @@ class StoreManager(unittest.TestCase):
     def test_post_item(self):
         """Testing posting an item."""
         response = self.client.post(
-            '/api/v1/product', data=json.dumps(self.cart_items), content_type='application/json')
+            '/api/v1/products', data=json.dumps(self.cart_items), content_type='application/json')
         res = json.loads(response.data.decode())
         self.assertEqual(response.status_code, 201)
 
     def test_get_all(self):
         """Testing to get all items"""
         response = self.client.get(
-            '/api/v1/product', data=json.dumps(self.cart_items), content_type='application/json')
+            '/api/v1/products', data=json.dumps(self.cart_items), content_type='application/json')
         self.assertEqual(response.status_code, 200)
     
     def test_by_id(self):
         response = self.client.get(
-            '/api/v1/product/1', data=json.dumps(self.cart_items), content_type='application/json'
+            '/api/v1/products/1', data=json.dumps(self.cart_items), content_type='application/json'
         )  
         self.assertEqual(response.status_code, 200)   
 
