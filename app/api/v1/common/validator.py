@@ -17,9 +17,9 @@ def check_name(l_name,name):
         if item["name"] == name:
             return "Product already in inventory"
 
-def check_item_name(lis_name, name):
+def check_item_name(lis_name, item):
     for item in lis_name:
-        if item["name"] != name:
+        if item["name"] != item:
             return{"message":"item not in inventory"}
 
 def check_item_price(lis, price):

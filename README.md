@@ -10,8 +10,8 @@ Store Manager is a web application that helps store owners manage sales and prod
 
 ### Running the app
 1. git clone the repo `https://github.com/vmuthabuku/Store-Manager.git`
-2. Switch to `challenge 2` branch \
-`$ git checkout challenge 2`
+2. Switch to `ch-codeclimate-badge-161416503` branch \
+`$ git checkout ch-codeclimate-badge-161416503`
 3. install requirements
 `$ pip install -r requirements.txt`
 4. in the terminal 
